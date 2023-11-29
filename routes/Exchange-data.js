@@ -23,13 +23,88 @@ const client = new google.auth.GoogleAuth({
     scopes: ['https://www.googleapis.com/auth/spreadsheets']
 })
 
-Exchange.get("/exchange_data", async(req,res) => {
+Exchange.get("/ED_MW", async(req,res) => {
     const Auth = await client.getClient()
     const sheets = google.sheets({ version: "v4", auth: Auth})
 
     const response = await sheets.spreadsheets.values.get({
         spreadsheetId: "1Ij0FTlLtWcAyA5A91AMYmgF6qOSVypbnn3SxG0PHnuk",
-        range: "Exchange Data"
+        range: "MW"
+    })
+
+    res.send(response.data.values)
+})
+
+Exchange.get("/ED_EG", async(req,res) => {
+    const Auth = await client.getClient()
+    const sheets = google.sheets({ version: "v4", auth: Auth})
+
+    const response = await sheets.spreadsheets.values.get({
+        spreadsheetId: "1Ij0FTlLtWcAyA5A91AMYmgF6qOSVypbnn3SxG0PHnuk",
+        range: "EG"
+    })
+
+    res.send(response.data.values)
+})
+
+Exchange.get("/ED_Zw", async(req,res) => {
+    const Auth = await client.getClient()
+    const sheets = google.sheets({ version: "v4", auth: Auth})
+
+    const response = await sheets.spreadsheets.values.get({
+        spreadsheetId: "1Ij0FTlLtWcAyA5A91AMYmgF6qOSVypbnn3SxG0PHnuk",
+        range: "Zw"
+    })
+
+    res.send(response.data.values)
+})
+
+Exchange.get("/ED_UG", async(req,res) => {
+    const Auth = await client.getClient()
+    const sheets = google.sheets({ version: "v4", auth: Auth})
+
+    const response = await sheets.spreadsheets.values.get({
+        spreadsheetId: "1Ij0FTlLtWcAyA5A91AMYmgF6qOSVypbnn3SxG0PHnuk",
+        range: "UG"
+    })
+
+    res.send(response.data.values)
+})
+
+
+Exchange.get("/ED_TZ", async(req,res) => {
+    const Auth = await client.getClient()
+    const sheets = google.sheets({ version: "v4", auth: Auth})
+
+    const response = await sheets.spreadsheets.values.get({
+        spreadsheetId: "1Ij0FTlLtWcAyA5A91AMYmgF6qOSVypbnn3SxG0PHnuk",
+        range: "TZ"
+    })
+
+    res.send(response.data.values)
+})
+
+
+Exchange.get("/ED_NG", async(req,res) => {
+    const Auth = await client.getClient()
+    const sheets = google.sheets({ version: "v4", auth: Auth})
+
+    const response = await sheets.spreadsheets.values.get({
+        spreadsheetId: "1Ij0FTlLtWcAyA5A91AMYmgF6qOSVypbnn3SxG0PHnuk",
+        range: "NG"
+    })
+
+    res.send(response.data.values)
+})
+
+
+Exchange.get("/ED_IC", async(req,res) => {
+    const Auth = await client.getClient()
+    const sheets = google.sheets({ version: "v4", auth: Auth})
+
+    const response = await sheets.spreadsheets.values.get({
+        spreadsheetId: "1Ij0FTlLtWcAyA5A91AMYmgF6qOSVypbnn3SxG0PHnuk",
+        range: "IC"
     })
 
     res.send(response.data.values)

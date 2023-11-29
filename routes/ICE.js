@@ -32,16 +32,91 @@ ice.get('/', (req, res) => {
     })
 })
 
-ice.get('/ice', async(req, res) => {
+ice.get('/ice_MW', async(req, res) => {
     const Auth = await client.getClient()
     const sheets = google.sheets({ version: "v4", auth: Auth})
 
     const response = await sheets.spreadsheets.values.get({
         spreadsheetId: "1QyPfLHIwPx4GbYLvknDKiRETDZzlpGVdgJ0y7v6-Hjk",
-        range: "ICE"
+        range: "MW"
     })
 
     res.send(response.data.values)
 })
 
+
+ice.get('/ice_EG', async(req, res) => {
+    const Auth = await client.getClient()
+    const sheets = google.sheets({ version: "v4", auth: Auth})
+
+    const response = await sheets.spreadsheets.values.get({
+        spreadsheetId: "1QyPfLHIwPx4GbYLvknDKiRETDZzlpGVdgJ0y7v6-Hjk",
+        range: "EG"
+    })
+
+    res.send(response.data.values)
+})
+
+
+ice.get('/ice_Zw', async(req, res) => {
+    const Auth = await client.getClient()
+    const sheets = google.sheets({ version: "v4", auth: Auth})
+
+    const response = await sheets.spreadsheets.values.get({
+        spreadsheetId: "1QyPfLHIwPx4GbYLvknDKiRETDZzlpGVdgJ0y7v6-Hjk",
+        range: "Zw"
+    })
+
+    res.send(response.data.values)
+})
+
+ice.get('/ice_UG', async(req, res) => {
+    const Auth = await client.getClient()
+    const sheets = google.sheets({ version: "v4", auth: Auth})
+
+    const response = await sheets.spreadsheets.values.get({
+        spreadsheetId: "1QyPfLHIwPx4GbYLvknDKiRETDZzlpGVdgJ0y7v6-Hjk",
+        range: "UG"
+    })
+
+    res.send(response.data.values)
+})
+
+
+ice.get('/ice_TZ', async(req, res) => {
+    const Auth = await client.getClient()
+    const sheets = google.sheets({ version: "v4", auth: Auth})
+
+    const response = await sheets.spreadsheets.values.get({
+        spreadsheetId: "1QyPfLHIwPx4GbYLvknDKiRETDZzlpGVdgJ0y7v6-Hjk",
+        range: "TZ"
+    })
+
+    res.send(response.data.values)
+})
+
+ice.get('/ice_NG', async(req, res) => {
+    const Auth = await client.getClient()
+    const sheets = google.sheets({ version: "v4", auth: Auth})
+
+    const response = await sheets.spreadsheets.values.get({
+        spreadsheetId: "1QyPfLHIwPx4GbYLvknDKiRETDZzlpGVdgJ0y7v6-Hjk",
+        range: "NG"
+    })
+
+    res.send(response.data.values)
+})
+
+
+ice.get('/ice_IC', async(req, res) => {
+    const Auth = await client.getClient()
+    const sheets = google.sheets({ version: "v4", auth: Auth})
+
+    const response = await sheets.spreadsheets.values.get({
+        spreadsheetId: "1QyPfLHIwPx4GbYLvknDKiRETDZzlpGVdgJ0y7v6-Hjk",
+        range: "IC"
+    })
+
+    res.send(response.data.values)
+})
 module.exports = ice
